@@ -45,7 +45,8 @@ Sourced from the Brazilian Institute of Geography and Statistics (IBGE), focusin
 -   **estados.py**: Main code for gathering and processing data
 -   **requirements.txt**: Python dependencies, including `matplotlib`
 
-The resulting graphs are sent to Slack.
+The resulting graph is sending to Slack.
+![Screenshot from 2024-10-31 15-32-25](https://github.com/user-attachments/assets/e689c0d1-764e-4ef9-91bc-353a45a2d115)
 
 ## Run
 
