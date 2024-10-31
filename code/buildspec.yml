@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Account ID=$AWS_ACCOUNT, Region=$AWS_REGION, Project Name=$IMAGE_NAME"
+      - apt update
+      - echo "Install Amazon ECR Credential Helper..."
+      - apt install -y amazon-ecr-credential-helper
+      - mkdir -p ~/.docker
+      - |
+          echo '{
+            "credsStore": "ecr-login",
+            "credHelpers": {
+              "public.ecr.aws": "ecr-login",
+              "'${AWS_ACCOUNT}'.dkr.ecr.'${AWS_REGION}'.amazonaws.com": "ecr-login"
+            }
+          }' > ~/.docker/config.json
+      - cat ~/.docker/config.json
+
+  build:
+    commands:
+      - echo "Building the Docker image..."
+      - docker build -t ${IMAGE_NAME} .
+      - docker tag ${IMAGE_NAME}:latest ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_NAME}:latest
+
+  post_build:
+    commands:
+      - echo "Pushing the Docker image to ECR..."
+      - docker push ${AWS_ACCOUNT}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_NAME}:latest
+      - echo "Build completed successfully."

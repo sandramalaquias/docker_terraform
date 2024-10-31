@@ -1,0 +1,9 @@
+/code/code.zip
+/terraform/graph.dot
+**/LICENSE.txt
+.idea
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+*/terraform.tfvars
+/terraform/.terraform*
+
