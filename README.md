@@ -31,7 +31,10 @@ The project is divided into distinct files:
 > 
 ** note:
 > the terraform state is store in this directory  
-> the graph.png is the project terraform plan 
+> the graph.png is the project terraform plan
+
+![graph](https://github.com/user-attachments/assets/4a92f547-832d-4586-99a8-adfe8c1b5f61)
+
 
 ## Data
 
