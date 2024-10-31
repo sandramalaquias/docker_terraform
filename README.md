@@ -29,7 +29,9 @@ The project is divided into distinct files:
     slack_token = "<your_slack_token>"
     slack_channel = "<your_slack_channel>"
 > 
-** note: the terraform state is store in this directory
+** note:
+> the terraform state is store in this directory
+> the graph.png is the project terraform plan 
 
 ## Data
 
