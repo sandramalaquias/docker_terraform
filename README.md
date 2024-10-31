@@ -30,7 +30,7 @@ The project is divided into distinct files:
     slack_channel = "<your_slack_channel>"
 > 
 ** note:
-> the terraform state is store in this directory
+> the terraform state is store in this directory  
 > the graph.png is the project terraform plan 
 
 ## Data
