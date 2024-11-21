@@ -23,11 +23,11 @@ The project is divided into distinct files:
 -   **output.tf**: Variables that output process results
 -   **providers.tf**: Specifies providers used in the project
 -   **variables.tf**: Defines variables used in the process, some marked as sensitive
--   **terraform.tvars**: Contains sensitive values such as Slack token and channel (excluded from Git for security reasons)
+-   **terraform.tfvars**: Contains sensitive values such as Slack token and channel (excluded from Git for security reasons)
     
-    > **Pro Tip:** `terraform.tvars` is excluded from version control. The content format is:
-    slack_token = "<your_slack_token>"
-    slack_channel = "<your_slack_channel>"
+    > **Pro Tip:** `terraform.tvars` is excluded from version control. The content format is:    
+    slack_token = "<your_slack_token>"    
+    slack_channel = "<your_slack_channel>"    
 > 
 ** note:
 > the terraform state is store in this directory  
